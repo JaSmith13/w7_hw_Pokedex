@@ -5,7 +5,7 @@ import PokedexEntry from '../components/PokedexEntry'
 const PokedexBox = () => {
 
     const [allPokemon, setAllPokemon] = useState([])
-    const [selectedPokemon, setSelectedPokemon] = useState(null)
+    const [selectedPokemon, setSelectedPokemon] = useState({})
 
     const getPokemon = () => {
         fetch('https://pokeapi.co/api/v2/pokemon/?limit=150')
@@ -31,7 +31,7 @@ const PokedexBox = () => {
         <>
         <h1>Pokedex</h1>
         <PokedexSelect allPokemon={allPokemon} pokemonSelected={onPokemonSelected}/>
-        {selectedPokemon ? <PokedexEntry selectedPokemon={selectedPokemon}/> : null}
+        {Object.keys(selectedPokemon).length ? <PokedexEntry selectedPokemon={selectedPokemon}/> : null}
         </>
     )
 }
