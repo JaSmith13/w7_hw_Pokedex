@@ -3,8 +3,9 @@ const PokedexEntry = ({selectedPokemon}) => {
     const pokemon = selectedPokemon
 
     const findTypes = () => {
-        return pokemon.types.map(type => {
-            return <li>{type.type.name}</li>
+        return pokemon.types.map((element, index)=> {
+            const type = element.type.name
+            return <li className={type} key={index}>{type}</li>
         })
     }
 
