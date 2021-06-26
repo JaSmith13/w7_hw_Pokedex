@@ -1,3 +1,5 @@
+import '../static/types.css'
+
 const PokedexEntry = ({selectedPokemon}) => {
 
     const pokemon = selectedPokemon
