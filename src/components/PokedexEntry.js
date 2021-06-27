@@ -12,9 +12,9 @@ const PokedexEntry = ({selectedPokemon}) => {
     }
 
     return(
-        <section>
+        <section id='pokedex-entry'>
+            <h2>{pokemon.name}</h2>
             <img src={pokemon.sprites.front_default} alt="selected pokemon" />
-            <h4>{pokemon.name}</h4>
             <p>Height: {(pokemon.height)/10}m</p>
             <p>Weight: {(pokemon.weight/10)}kg</p>
             <ul id='types-list'>

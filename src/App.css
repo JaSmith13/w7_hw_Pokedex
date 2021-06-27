@@ -1,9 +1,69 @@
 #root {
     font-family: pixelated;
+    
+}
+
+header{  
+    padding: 10px;;
+    background-color: #f91c1d;
+    display: grid;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    margin:0;
+    font-weight: 500;
+}
+
+header > img{
+    display:block;
+}
+
+main{
+    background-color: #f91c1d;
+    padding-bottom: 10px;
 }
 
 #pokedex-wrapper{
-    display: flex
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 2rem;
+    grid-template-rows: minmax(auto, 280px);
+}
+
+#pokemon-list{
+    margin: 0;
+    margin-left: 10px;
+    list-style: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 4px solid black;
+    border-radius: 3%; 
+    padding-left: 0;
+    font-size: 18px; 
+    background-color: #444; 
+}
+
+#pokemon-list > li{
+    padding-left: 10px;
+    text-transform: capitalize;
+    top: 0;
+    position: relative;
+    transition: top ease 0.3s
+}
+
+#pokemon-list > li:hover{
+    top: -5px
+}
+
+
+#pokemon-list li:nth-child(even){
+    background-color: lightgray;
+}
+
+#pokemon-list li:nth-child(odd){
+    background-color: white;
 }
 
 #types-list{
@@ -12,5 +72,41 @@
 
 #types-list > li{
     display: inline;
-    padding: 5px;
+    margin: 5px;
+    padding: 3px;
+    border: 2px solid whitesmoke;
+    border-radius: 10%;
+}
+
+section{
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 3%;
+    background-color: whitesmoke;
+    background-image: url('./images/pokeball_background.png'), 
+    linear-gradient(whitesmoke,#444);  
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+section > *{
+    margin: 8px;
+    text-shadow: 2px 2px black;
+}
+
+section > h2{
+    text-transform: capitalize;
+    font-weight: 450;
+}
+
+footer{
+    text-align: center;
+}
+
+footer > h2{
+    font-weight: 450;
 }

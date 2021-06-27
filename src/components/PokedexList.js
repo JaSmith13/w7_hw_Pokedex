@@ -6,7 +6,7 @@ const PokedexList = ({allPokemon, pokemonSelected}) => {
     }
 
     const pokemonListOptions = allPokemon.map((pokemon, index) =>{
-        return <li key={index} value={index} onClick={handleClick}>{pokemon.name}</li>
+        return <li key={index} value={index} onClick={handleClick}>{pokemon.id}. {pokemon.name}</li>
 })
 
     return(

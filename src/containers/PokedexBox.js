@@ -32,6 +32,7 @@ const PokedexBox = () => {
         <>
         <header>
             <img src={logo} alt="Pokemon logo" id='logo'/>
+            <h1>A Pokedex App</h1>
         </header>
         <main>
             <div id='pokedex-wrapper'>
@@ -39,6 +40,9 @@ const PokedexBox = () => {
                 {Object.keys(selectedPokemon).length ? <PokedexEntry selectedPokemon={selectedPokemon}/> : null}
             </div>
         </main>
+        <footer>
+            <h2>Aly Smith CodeClan 2021</h2>
+        </footer>
         </>
     )
 }
