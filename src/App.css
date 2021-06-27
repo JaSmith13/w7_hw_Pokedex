@@ -103,6 +103,10 @@ section > h2{
     font-weight: 450;
 }
 
+span{
+    font-size: smaller;
+}
+
 footer{
     text-align: center;
 }
