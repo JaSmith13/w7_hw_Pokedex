@@ -1,0 +1,16 @@
+#root {
+    font-family: pixelated;
+}
+
+#pokedex-wrapper{
+    display: flex
+}
+
+#types-list{
+    list-style: none;
+}
+
+#types-list > li{
+    display: inline;
+    padding: 5px;
+}

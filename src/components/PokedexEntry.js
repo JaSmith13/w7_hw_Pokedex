@@ -17,7 +17,7 @@ const PokedexEntry = ({selectedPokemon}) => {
             <h4>{pokemon.name}</h4>
             <p>Height: {(pokemon.height)/10}m</p>
             <p>Weight: {(pokemon.weight/10)}kg</p>
-            <ul>
+            <ul id='types-list'>
                 Type: {findTypes()} 
             </ul>
         </section>

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
-import PokedexSelect from '../components/PokedexSelect'
+import PokedexList from '../components/PokedexList'
 import PokedexEntry from '../components/PokedexEntry'
+import logo from '../images/Pokemon_logo.png'
 
 const PokedexBox = () => {
 
@@ -29,9 +30,15 @@ const PokedexBox = () => {
 
     return(
         <>
-        <h1>Pokedex</h1>
-        <PokedexSelect allPokemon={allPokemon} pokemonSelected={onPokemonSelected}/>
-        {Object.keys(selectedPokemon).length ? <PokedexEntry selectedPokemon={selectedPokemon}/> : null}
+        <header>
+            <img src={logo} alt="Pokemon logo" id='logo'/>
+        </header>
+        <main>
+            <div id='pokedex-wrapper'>
+                <PokedexList allPokemon={allPokemon} pokemonSelected={onPokemonSelected}/>
+                {Object.keys(selectedPokemon).length ? <PokedexEntry selectedPokemon={selectedPokemon}/> : null}
+            </div>
+        </main>
         </>
     )
 }
